@@ -35,7 +35,7 @@ async def create(request:RequestBook,db:Session=Depends(get_db)):
 @router.get('/')
 async def get(db:Session=Depends(get_db)):
     __book=crud.get_book(db,0,100)
-    return {"liat of Book": __book}
+    return {"list of Book": __book}
 
 
 @router.get('/{id}')
